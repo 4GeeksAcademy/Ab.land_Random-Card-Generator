@@ -1,35 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Card Generator</title>
+
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <!-- Write your HTML code here, you can delete everything withing the body tags -->
+  <div class="container-fluid">
+    <div class="card position-relative m-4">
+      <div class="jackTop position-absolute ">
+        <span class="jack position-absolute top-50 start-50 translate-middle"></span>
+      </div>
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <span class="cardNumber"></span>
+      </div>
+      <div class="jackBottom position-absolute ">
+        <span class="jack position-absolute top-50 start-50 translate-middle"></span>
       </div>
     </div>
 
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-  </body>
+    <h1 id="countdown" class="text-info ms-4">Next card in: 10</h1>
+
+    <button id="nextButton" type="button" class="btn btn-light ms-4">Next</button>
+
+    <div class="input-group ms-4 my-2 align-items-center " id="input-group-Div">
+      <label for="width" class="input-group-text "> Width: </label>
+      <input type="text" name="width" class="form-control" placeholder="250">
+      <span class="input-group-text ">px</span>
+    </div>
+
+    <div class="input-group ms-4 my-2 align-items-center " id="input-group-Div">
+      <label for="height" class="input-group-text "> Height: </label>
+      <input type="text" name="height" class="form-control" placeholder="360">
+      <span class="input-group-text ">px</span>
+    </div>
+
+
+  </div>
+
+
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="/app.js"></script>
+</body>
+
 </html>

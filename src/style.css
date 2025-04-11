@@ -1,5 +1,29 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: rgb(0, 81, 44);
+}
+.card{
+    width: 250px;
+    height: 360px;
+}
+.card span{
+    font-size: 90px;
+    
+}
+.jackTop{
+    width: 50px;
+    height: 50px;
+    left : 12px;
+    top: 15px;
+}
+.jackBottom{
+    rotate: 180deg;
+    width: 50px;
+    height: 75px;
+    right : 12px;
+    bottom: 15px;
+}
+#input-group-Div{
+    width: 250px;
 }
