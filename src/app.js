@@ -8,7 +8,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function () {
   //write your code here
   ramdomCardGenerator()
-  };
+};
 
 let jackArray = ["♦", "♥", "♠", "♣",];
 let cardArray = ["A", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K",];
@@ -18,13 +18,14 @@ let card = document.querySelector(".card");
 
 function ramdomCardGenerator() {
   // Easter Egg
-  if (Math.random() < 0.0133) { 
+  if (Math.random() < 0.0133) {
     jack[0].innerHTML = "★";
     jack[1].innerHTML = "★";
     cardNumber.innerHTML = "Joker";
     card.style.color = "orange";
-    // alert("🎉 JACK JACK COMBO UNLOCKED!");
-    return; 
+    alert("🎉 Easter Egg UNLOCKED!");
+    timeLeft = 11
+    return;
   }
 
   // Normal card
@@ -48,15 +49,14 @@ function ramdomNumberGenerator(num) {
 };
 
 
-
+// Timer 
 let countdownElement = document.getElementById("countdown");
 let timeLeft = 10;
 
-// Timer 
 function updateCountdown() {
   timeLeft--;
   countdownElement.textContent = `Next card in: ${timeLeft}`;
-  
+
   if (timeLeft === 0) {
     ramdomCardGenerator();
   }
@@ -69,31 +69,21 @@ nextbutton.addEventListener("click", ramdomCardGenerator);
 
 
 // text input event
-let heightInput = document.getElementsByName("height")
-let widthInput = document.getElementsByName("width")
+let heightInput = document.getElementsByName("height");
+let widthInput = document.getElementsByName("width");
 
 
+widthInput[0].addEventListener("change", (e) => {
+  if (e.target.value !== "") {
+    card.style.width = e.target.value + "px";
+  }
+  else { card.style.width = 250 }
+});
 
-
-widthInput[0].addEventListener("change",(e) =>{ 
-  
-  
-  if (e.target.value !== ""){
-  card.style.width = e.target.value + "px";
-
-}
-  else{ card.style.width = 250}
-}
-);
-
-heightInput[0].addEventListener("change",(e) =>{ 
- 
-  
-  if (e.target.value !== ""){
-  card.style.height = e.target.value + "px";
-
-}
-  else{ card.style.width = 250}
-}
-);
+heightInput[0].addEventListener("change", (e) => {
+  if (e.target.value !== "") {
+    card.style.height = e.target.value + "px";
+  }
+  else { card.style.width = 250 }
+});
 
